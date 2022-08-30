@@ -19,11 +19,11 @@ def generate_fake_data(number_students, number_teachers) -> tuple():
     '''Возьмём три компании из faker и поместим их в нужную переменную'''
     fake_data = faker.Faker('en-US')
 
-    # Создадим набор компаний в количестве number_companies
+    # Создадим набор студентов в количестве number_students
     for _ in range(number_students):
         fake_students.append(fake_data.name())
 
-    # Сгенерируем теперь number_employees количество сотрудников'''
+    # Сгенерируем теперь number_teachers количество преподавателей'''
     for _ in range(number_teachers):
         fake_teachers.append(fake_data.name())
 
