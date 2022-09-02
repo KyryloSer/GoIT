@@ -1,24 +1,20 @@
 from datetime import datetime
 
+
 def factorize(*number):
     start_time = datetime.now()
+    res = []
     a = []
-    b = []
-    c = []
-    d = []
     for i in range(len(number)):
         for n in range(1, number[i] + 1):
-            if number[i] % n == 0 and i == 0:
+            if number[i] % n == 0:
                 a.append(n)
-            elif number[i] % n == 0 and i == 1:
-                b.append(n)
-            elif number[i] % n == 0 and i == 2:
-                c.append(n)
-            elif number[i] % n == 0 and i == 3:
-                d.append(n)
+        res.append(a.copy())
+        a.clear()
     print(datetime.now() - start_time)
     # raise NotImplementedError()
-    return a, b, c, d
+    return res
+
 
 
 a, b, c, d = factorize(128, 255, 99999, 10651060)
